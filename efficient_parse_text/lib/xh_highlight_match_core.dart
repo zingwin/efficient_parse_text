@@ -52,6 +52,16 @@ class XHHighlightMatchCore {
 
     List<XHMatchInfo> allMatchList = [];
     int cursor = 0;
+    if (tmpMatchList.isEmpty) {
+      return [
+        XHMatchInfo(
+            matchType: unMatch.matchType,
+            start: cursor,
+            end: target.length - 1,
+            value: target.substring(cursor))
+      ];
+    }
+
     for (int i = 0; i < tmpMatchList.length; i++) {
       XHMatchInfo match = tmpMatchList[i];
       if (cursor != match.start) {
