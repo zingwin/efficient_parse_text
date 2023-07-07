@@ -57,7 +57,7 @@ class XHHighlightMatchCore {
         XHMatchInfo(
             matchType: unMatch.matchType,
             start: cursor,
-            end: target.length - 1,
+            end: target.length,
             value: target.substring(cursor))
       ];
     }
@@ -74,11 +74,11 @@ class XHHighlightMatchCore {
       allMatchList.add(match);
       cursor = match.end;
     }
-    if (cursor != target.length - 1) {
+    if (cursor != target.length) {
       allMatchList.add(XHMatchInfo(
           matchType: unMatch.matchType,
           start: cursor,
-          end: target.length - 1,
+          end: target.length,
           value: target.substring(cursor)));
     }
     return allMatchList;

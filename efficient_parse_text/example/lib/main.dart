@@ -52,12 +52,16 @@ class _MyHomePageState extends State<MyHomePage> {
           RichText(
               text: TextSpan(
                   children: matchManager.matchThenGenInlineSpan(
-                      "你好[爱心][呲牙] 看链接 https://mp.weixin.qq.com 邮箱地址: leaf@test.com"))),
+                      "你好[爱心][呲牙] 看链接 https://mp.weixin.qq.com 邮箱地址: leaf@test.com;"))),
           const Divider(),
           RichText(
               text: TextSpan(
-                  children:
-                      matchManager.matchThenGenInlineSpan("[你好]z[笑脸]leaf"))),
+                  children: matchManager.matchThenGenInlineSpan(
+                      "你好[你好]https://www.baidu.com;llll"))),
+          const Divider(),
+          RichText(
+              text: TextSpan(
+                  children: matchManager.matchThenGenInlineSpan("[你好]z[笑脸]l"))),
           const Divider(),
           RichText(
               text: TextSpan(
@@ -65,8 +69,12 @@ class _MyHomePageState extends State<MyHomePage> {
                       "Flutter调优工具使用及Flutter高性能编程部分要点分析:https://juejin.cn/post/7157905466821967902"))),
           const Divider(),
           RichText(
+              text:
+                  TextSpan(children: matchManager.matchThenGenInlineSpan("L"))),
+          const Divider(),
+          RichText(
               text: TextSpan(
-                  children: matchManager.matchThenGenInlineSpan("Faa"))),
+                  children: matchManager.matchThenGenInlineSpan("leaf"))),
           const Divider(),
         ],
       ),

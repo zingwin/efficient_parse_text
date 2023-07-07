@@ -1,6 +1,6 @@
 name: efficient_parse_text
 description: 高性能易拓展文本链接、表情、电话、邮箱地址高亮解析
-version: 1.1.0
+version: 1.1.1
 homepage: https://github.com/zingwin/efficient_parse_text/tree/master
 
 environment:
